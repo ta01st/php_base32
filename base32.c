@@ -162,7 +162,6 @@ PHP_FUNCTION(base32_encode)
 		}
 		
 		result_len = bytes_encode(text, text_len, &buffers, buffers_len);
-		php_printf("result length: %d content:%s\n", result_len, buffers);
 		result_len = spprintf(&result, 0, "%s", buffers);
 		efree(buffers);
 	} else {
