@@ -193,6 +193,7 @@ PHP_FUNCTION(base32_decode)
 		
 		result_len = bytes_decode(text, text_len, &buffers, buffers_len);
 		result_len = spprintf(&result, 0, "%s", buffers);
+		efree(buffers);
 	} else {
 		result_len = spprintf(&result, 0, "");
 	}
